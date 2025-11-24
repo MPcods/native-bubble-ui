@@ -4,7 +4,6 @@
 
 MenuLayout::MenuLayout(Renderer* r)
         : renderer(r) {
-    // Drei Beispiel-Buttons
     buttons.emplace_back(std::make_unique<MenuButton>(renderer, "Action 1"));
     buttons.back()->setOnClickId(1);
 
@@ -60,4 +59,5 @@ void MenuLayout::draw() {
     for (auto& b : buttons) {
         b->draw();
     }
+
 }
